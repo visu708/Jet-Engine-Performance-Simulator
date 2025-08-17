@@ -1,11 +1,11 @@
-# Combustor Component
+# Combustor 
 
 # components/combustor.py
 from Physics.thermodynamics import fuel_LHV
 
 class Combustor:
     """
-    Simple combustor: specify Tt4_target (total temperature after combustion) or f_guess (fuel-air ratio).
+    Simple combustor  Tt4_target (total temperature after combustion)  f_guess (fuel-air ratio).
     Returns mdot_f (kg/s) stored as 'mdot_f' in state.
     """
     def __init__(self, pt_loss_frac=0.06, eta_b=0.98, LHV=None):
@@ -39,3 +39,4 @@ class Combustor:
         out = dict(state)
         out.update({'pt': pt_out, 'Tt': Tt4, 'mdot_f': mdot_f})
         return out
+
